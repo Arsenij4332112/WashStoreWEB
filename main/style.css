@@ -87,6 +87,7 @@ header {
   font-size: 16px;
   font-weight: bold;
   margin-bottom: 10px;
+  text-align: center;
 }
 
 .menu {
@@ -265,6 +266,190 @@ main {
   color: #e9e9eb;
 }
 
+.author-hero {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 24px;
+  align-items: center;
+}
+
+.author-photo-card,
+.info-card,
+.contact-card {
+  background: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.12);
+}
+
+.author-photo-card {
+  padding: 16px;
+  text-align: center;
+}
+
+.author-photo {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 18px;
+  display: block;
+}
+
+.author-photo-caption {
+  margin-top: 10px;
+  font-size: 13px;
+  color: #4b5563;
+}
+
+.author-intro p + p {
+  margin-top: 12px;
+}
+
+.author-grid {
+  margin-top: 18px;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.info-card {
+  padding: 18px;
+}
+
+.info-card h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.info-card p {
+  color: #4b5563;
+}
+
+.contact-card {
+  margin-top: 18px;
+  padding: 18px 20px;
+}
+
+.contact-card p + p {
+  margin-top: 8px;
+}
+
+.contact-card a {
+  color: #3d619b;
+  text-decoration: none;
+}
+
+.contact-card a:hover {
+  text-decoration: underline;
+}
+
+.firm-grid {
+  margin-top: 18px;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.route-layout {
+  margin-top: 18px;
+  display: grid;
+  grid-template-columns: minmax(260px, 1fr) minmax(320px, 1.2fr);
+  gap: 18px;
+  align-items: stretch;
+}
+
+.route-card,
+.scheme-card {
+  background: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.12);
+  padding: 18px;
+}
+
+.route-card h3,
+.scheme-card h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.route-list {
+  margin-top: 12px;
+  padding-left: 18px;
+  color: #4b5563;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.scheme-map {
+  position: relative;
+  min-height: 280px;
+  border-radius: 18px;
+  overflow: hidden;
+  background:
+    linear-gradient(90deg, transparent 47%, #3d619b 47%, #3d619b 53%, transparent 53%),
+    linear-gradient(transparent 26%, #ef4b4c 26%, #ef4b4c 34%, transparent 34%),
+    linear-gradient(135deg, #f8fafc, #e2e8f0);
+  border: 1px solid #d5dbe6;
+}
+
+.scheme-road {
+  position: absolute;
+  font-size: 14px;
+  font-weight: 600;
+  color: #43506c;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 6px 10px;
+  border-radius: 999px;
+}
+
+.horizontal {
+  top: 14px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.vertical {
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%) rotate(-90deg);
+  transform-origin: left top;
+}
+
+.scheme-point,
+.scheme-parking,
+.scheme-stop {
+  position: absolute;
+  padding: 8px 12px;
+  border-radius: 14px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #ffffff;
+  box-shadow: 0 6px 14px rgba(15, 23, 42, 0.18);
+}
+
+.scheme-point {
+  top: 108px;
+  left: 56%;
+  background: #ef4b4c;
+}
+
+.scheme-parking {
+  top: 190px;
+  left: 60%;
+  background: #3d619b;
+}
+
+.scheme-stop {
+  top: 82px;
+  left: 26%;
+  background: #43506c;
+}
+
+.scheme-caption {
+  margin-top: 12px;
+  color: #4b5563;
+}
+
 .price {
   font-weight: bold;
   white-space: nowrap;
@@ -385,6 +570,18 @@ footer a:hover {
   .product-cards {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 12px;
+  }
+
+  .author-hero,
+  .author-grid,
+  .firm-grid,
+  .route-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .author-photo-card {
+    max-width: 320px;
+    margin: 0 auto;
   }
 
   .home-product-cards {
